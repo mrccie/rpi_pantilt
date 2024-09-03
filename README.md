@@ -6,6 +6,7 @@ This repo supports the creation of an automatic pan/tilt camera that can follow 
 ## Acknowledgements
 This work is based __heavily__ on a post by Leigh Johnson in Towards Data Science.
 
+
 ## Hardware Requirements
 
 ### Hardware Platform 1.0 (RPi 4)
@@ -29,3 +30,6 @@ Items I would like to test against this guide to see if we can realize performan
 - Raspberry Pi 5 AI Kit (13 TOPS), OR;
 - Coral M.2 Accelerator with Dual Edge TPU (needs RPi M.2 hat) (8 TOPS)
 - RGB NeoPixel Stick (Adafruit product: 8x 5050 RGB LED with integrated drivers)
+
+
+## Raspberry Pi Setup
