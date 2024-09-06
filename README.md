@@ -32,4 +32,9 @@ Items I would like to test against this guide to see if we can realize performan
 - RGB NeoPixel Stick (Adafruit product: 8x 5050 RGB LED with integrated drivers)
 
 
-## Raspberry Pi Setup
+## Hardware Setup and Bootstrapping
+
+### Raspberry Pi Setup
+For initial setup, see this repo: [RPi Setup](https://github.com/mrccie/rpi_setup)
+
+
