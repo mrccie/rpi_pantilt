@@ -51,7 +51,7 @@ This is a convenience change that will make it easier to find and connect to you
 
 __WiFi Networking Example__
 
-Modify the file <b>/etc/dhcpcd.conf</b> to read as follows:
+Modify the file <b>/etc/dhcp/dhclient.conf</b> to read as follows:
 ```sh
 interface wlan0
 static ip_address=192.168.1.45/24    
