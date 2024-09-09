@@ -51,15 +51,20 @@ This is a convenience change that will make it easier to find and connect to you
 
 __WiFi Networking Example__
 
-Modify the file <b>/etc/dhcp/dhclient.conf</b> to read as follows:
+Identify the interface to update with the command:
 ```sh
-interface wlan0
-static ip_address=192.168.1.45/24    
-static routers=192.168.1.1
-static domain_name_servers=208.67.220.220 8.8.8.8
+sudo nmcli con show
 ```
-*For a wired network connection, change the interface from "wlan0" to the appropriate "eth" interface as found in 'ip address | grep eth'
+
+In my case, I preconfigured the WiFi interface and it is listed as "preconfigured".  So I proceed as follows to set a static IP, DNS servers, and restart the interface:
+```sh
+sudo nmcli con mod preconfigured ipv4.addresses 192.168.1.45/24 ipv4.method manual
+sudo nmcli con mod preconfigured ipv4.gateway 192.168.1.1
+sudo nmcli con mod preconfigured ipv4.dns "208.67.220.220 8.8.8.8"
+sudo nmcli con down preconfigured && sudo nmcli c up preconfigured
+```
 *You will need to ensure your IP address, router, and domain name servers are appropriate for your network
+*It took a minute or two after the last command for the WiFi to come back up; please be patient
 
 ### (Optional but Recommended) Set your Local Timezone
 
