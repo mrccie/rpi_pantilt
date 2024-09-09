@@ -45,9 +45,11 @@ Follow the steps below to install the VIM text editor:
 sudo apt-get install -y vim
 ```
 
-### (Optional but Recommended) Set a Static IP
+### (Optional) Set a Static IP
 
-This is a convenience change that will make it easier to find and connect to your camera later.  There is an [exhaustive page](https://www.raspberrypi.org/documentation/configuration/tcpip/) provided by the Raspberry Pi Foundation, but an example has been included below.  Note that if you are using SSH to connect to your RPi, you will need to reconnect to the new IP once you have changed it.
+This is a convenience change that will make it easier to find and connect to your camera later.  The recommended approach is to create a static reservation on your DHCP server, however if that is not possible or not desired then follow these steps.
+
+There is an [exhaustive page](https://www.raspberrypi.org/documentation/configuration/tcpip/) provided by the Raspberry Pi Foundation, but an example has been included below.  Note that if you are using SSH to connect to your RPi, you will need to reconnect to the new IP once you have changed it.
 
 __WiFi Networking Example__
 
