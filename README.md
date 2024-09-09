@@ -37,6 +37,14 @@ Items I would like to test against this guide to see if we can realize performan
 ### Initial Raspberry Pi Setup
 For initial setup, see this repo: [RPi Setup](https://github.com/mrccie/rpi_setup)
 
+
+### (Optional) Install VIM (because it's best!)
+
+Follow the steps below to install the VIM text editor:
+```sh
+sudo apt-get install -y vim
+```
+
 ### (Optional but Recommended) Set a Static IP
 
 This is a convenience change that will make it easier to find and connect to your camera later.  There is an [exhaustive page](https://www.raspberrypi.org/documentation/configuration/tcpip/) provided by the Raspberry Pi Foundation, but an example has been included below.  Note that if you are using SSH to connect to your RPi, you will need to reconnect to the new IP once you have changed it.
