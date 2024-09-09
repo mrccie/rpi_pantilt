@@ -34,7 +34,41 @@ Items I would like to test against this guide to see if we can realize performan
 
 ## Hardware Setup and Bootstrapping
 
-### Raspberry Pi Setup
+### Initial Raspberry Pi Setup
 For initial setup, see this repo: [RPi Setup](https://github.com/mrccie/rpi_setup)
 
+### (Optional but Recommended) Set a Static IP
 
+[External More Exhaustive Link](https://www.raspberrypi.org/documentation/configuration/tcpip/).  
+
+__WiFi Networking Example__
+
+Modify the file <b>/etc/dhcpcd.conf</b> to read as follows:
+```sh
+interface wlan0
+static ip_address=192.168.1.45/24    
+static routers=192.168.1.1
+static domain_name_servers=208.67.220.220 8.8.8.8
+```
+*For a wired network connection, change the interface from "wlan0" to the appropriate "eth" interface as found in 'ip address | grep eth'
+*You will need to ensure your IP address, router, and domain name servers are appropriate for your network
+
+Change the password of the user 'pi' if you haven't done so already:
+```sh
+passwd
+```
+
+Update the operating system:
+```sh
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+Set your local timezone:
+```sh
+sudo raspi-config
+> 5 - Localization Options
+>> L2 - Change Time Zone
+>>> Pick accordingly
+>>>> Finish
+```
