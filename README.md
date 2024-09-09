@@ -39,7 +39,7 @@ For initial setup, see this repo: [RPi Setup](https://github.com/mrccie/rpi_setu
 
 ### (Optional but Recommended) Set a Static IP
 
-[External More Exhaustive Link](https://www.raspberrypi.org/documentation/configuration/tcpip/).  
+This is a convenience change that will make it easier to find and connect to your camera later.  There is an [exhaustive page](https://www.raspberrypi.org/documentation/configuration/tcpip/) provided by the Raspberry Pi Foundation, but an example has been included below.  Note that if you are using SSH to connect to your RPi, you will need to reconnect to the new IP once you have changed it.
 
 __WiFi Networking Example__
 
@@ -53,22 +53,23 @@ static domain_name_servers=208.67.220.220 8.8.8.8
 *For a wired network connection, change the interface from "wlan0" to the appropriate "eth" interface as found in 'ip address | grep eth'
 *You will need to ensure your IP address, router, and domain name servers are appropriate for your network
 
-Change the password of the user 'pi' if you haven't done so already:
+### (Optional but Recommended) Set your Local Timezone
+
+Follow the steps below to set your timezone:
 ```sh
-passwd
+sudo raspi-config
+> 5 - Localization Options
+>> L2 - Timezone
+>>> Pick accordingly
+>>>> Finish
 ```
 
-Update the operating system:
+### (Optional but Strongly Recommended) Update the Operating System
+
+Follow the steps below to update the software your Pi runs (may take a minute):
 ```sh
 sudo apt-get update
 sudo apt-get upgrade
 ```
 
-Set your local timezone:
-```sh
-sudo raspi-config
-> 5 - Localization Options
->> L2 - Change Time Zone
->>> Pick accordingly
->>>> Finish
-```
+
