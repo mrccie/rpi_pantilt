@@ -66,7 +66,7 @@ sudo raspi-config
 
 ### (Optional but Strongly Recommended) Update the Operating System
 
-Follow the steps below to update the software your Pi runs (may take a minute):
+Follow the steps below to update the software your Pi runs (expect this to take awhile):
 ```sh
 sudo apt-get update
 sudo apt-get upgrade
